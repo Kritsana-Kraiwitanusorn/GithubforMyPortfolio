@@ -1,0 +1,809 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --background-color: #ffffff;
+    --text-color: #2c3e50;
+    --light-gray: #f8f9fa;
+    --border-color: #eaeaea;
+    --Subtext-color: #586675;
+    --Jet: #BED7D1;
+    --Lemon: #F7EBC3;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    line-height: 1.7;
+    color: var(--text-color);
+    /* background : url("Image/BG.jpg");
+    background-size: auto, auto; */
+    background: linear-gradient(100deg, #BED7D1, #F7EBC3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* Navigation Styles */
+.navbar {
+    background: linear-gradient(100deg, #69d4bb, #f1d47b);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.8s ease;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    gap: 35px;
+    padding-right: 60px;
+}
+
+.nav-menu li a {
+    color: var(--border-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--border-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover::after {
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 25px;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        Right: 60%;
+        top: 50px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.8s;
+        padding: 10px;
+        color: #000;   
+    }
+
+    .nav-menu li a {
+        color: var(--secondary-color);
+        font-size: 0.8em;
+        position: fixed;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(-5px, -6px);
+    }
+   
+    .nav-menu li {
+        margin: 6px 0;
+    }
+}
+
+/* ===================================================================== */
+
+/* Header Styles */
+/* header {
+    background: linear-gradient(100deg, #BED7D1, #F7EBC3);
+    color: var(--text-color);
+    padding: 100px 0 50px;
+    text-align: center;
+} */
+
+/* ADD */
+.hero {
+    height: 100vh;
+    background: linear-gradient(100deg, #BED7D1, #F7EBC3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 3px solid var(--border-color);
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    box-shadow: 0 0 20px #87fadd, 0 0 40px #02ebb1;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    color: var(--text-color);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    /* background: linear-gradient(100deg, #d7bebe, #F7EBC3); */
+}
+
+/*---------------------------- Educations Section ----------------------------*/
+.educations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+
+    /* max-width: 800px;
+    margin: 0 auto; */
+}
+
+.degree {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* .education-timeline {
+    position: relative;
+    padding-left: 50px;
+} */
+
+.educations-item {
+    /* background-color: var(--light-gray); */
+    /* background-color: linear-gradient(200deg, #bee4da, #f1e7c9); */
+    background: linear-gradient(100deg, #69d4bb, #f1d47b);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease; 
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.educations-item.animate {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.educations-item:hover {
+    /* transform: translateY(-10px); */
+    transform: translateX(10px);
+    box-shadow: 10px 10px 10px rgba(75, 255, 4, 0.05);
+} 
+
+
+
+@media (max-width: 600px) {
+    .education-container {
+        padding: 20px;
+    }
+}
+
+
+/*---------------------------- Skills Section ----------------------------*/
+
+/* อย่าลืมใส่ animation */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.skills-category {
+    background: linear-gradient(100deg, #69d4bb, #f1d47b);
+    border-radius: 12px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skills-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.skills-category h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.skill-chip {
+    display: inline-block;
+    background-color: #e8f4f8;
+    color: #2980b9;
+    margin: 8px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-chip:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .skills-category {
+        width: 100%;
+    }
+}
+
+.skills-category.animate {
+    animation: fadeInSlide 1s ease-in;
+}
+
+/*---------------------------- Experience Section ----------------------------*/
+.experience-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--border-color);
+}
+
+.experience-item {
+    margin: 40px 0;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.experience-item.animate {
+    animation: fadeInSlide 1s ease forwards;
+}
+
+.experience-item:nth-child(even) {
+    transform: translateX(30px);
+}
+
+.experience-content {
+    background: linear-gradient(200deg, #bee4da, #f1e7c9);
+    cursor: pointer;
+    padding: 25px;
+    border-radius: 12px;
+    position: relative;
+    width: calc(50% - 30px);
+    margin-left: auto;
+    transition: all 0.3s ease;
+}
+
+.experience-content:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.experience-content h2 {
+    margin-bottom: 10px;
+}
+
+.experience-item:nth-child(odd) .experience-content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.experience-content::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--Lemon);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.experience-item:nth-child(odd) .experience-content::before {
+    right: -40px;
+}
+
+.experience-item:nth-child(even) .experience-content::before {
+    left: -40px;
+}
+
+
+/* For PopUp Experience Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-in-out;
+    /* เพิ่ม overflow: hidden เพื่อป้องกันการ scroll ของ background */
+    overflow: hidden;
+}
+
+.modal-content {
+    /* background-color: var(--light-gray); */
+    background: linear-gradient(400deg, #ddeeea, #fff8e2);
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    /* กำหนดความสูงสูงสุดและเพิ่ม scroll */
+    max-height: 85vh;
+    display: flex;
+    animation: slideIn 0.3s ease-in-out;
+    flex-direction: column;
+}
+
+@keyframes slideIn{
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* ปรับแต่ง close button ให้อยู่ด้านบนเสมอ */
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+    z-index: 2;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* ส่วนเนื้อหาที่สามารถ scroll ได้ */
+.modal-body {
+    margin-top: 20px;
+    padding-right: 10px; /* เพิ่ม padding เพื่อให้เนื้อหาไม่ชิดกับ scrollbar */
+    overflow-y: auto; /* เพิ่ม scroll เฉพาะแนวตั้ง */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Customize scrollbar for WebKit browsers (Chrome, Safari) */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.duration {
+    color: var(--Subtext-color);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.responsibilities, .achievements {
+    margin-bottom: 20px;
+}
+
+.modal h2 h3 h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.modal ul {
+    padding-left: 20px;
+}
+
+.modal li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* ปรับแต่งการแสดงผลบนอุปกรณ์มือถือ */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .modal-body {
+        padding-bottom: 20px; /* เพิ่ม padding ด้านล่างสำหรับมือถือ */
+    }
+}
+
+
+/*---------------------------- Certificates Section ----------------------------*/
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.certificates-card {
+    cursor: pointer;
+    background-color: var(--light-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.certificates-card.animate {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.certificates-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certificates-card:hover img {
+    transform: scale(1.05);
+}
+
+.certificates-info {
+    padding: 15px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cert-modal-content {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+}
+
+/*---------------------------- Contact Section ----------------------------*/
+.contact-info {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--light-gray);
+    padding: 40px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+
+.contact-info i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+    width: 20px;
+}
+
+
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-timeline::before {
+        left: 20px;
+    }
+
+    .experience-content {
+        width: calc(100% - 50px);
+        margin-left: 50px !important;
+    }
+
+    .experience-item:nth-child(odd) .experience-content::before,
+    .experience-item:nth-child(even) .experience-content::before {
+        left: -40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+    }
+    
+    .nav-menu-active {
+            transform: translateX(0);
+    }
+}
+
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ------------------------------------------------------ */
+/* Styles สำหรับ Gallery Modal */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden;
+}
+
+.gallery-modal-content {
+    position: relative;
+    background: linear-gradient(400deg, #d9ebe7, #fff8e2);
+    /* background-color: #fff; */
+    margin: 2% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 100vh;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    min-height: 400px;
+}
+
+.gallery-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-main img {
+    max-width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+}
+
+/* ปุ่มนำทาง */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    /* padding: 15px; */
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease;
+}
+
+.gallery-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+/* Thumbnails */
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.thumbnail.active {
+    border-color: #007bff;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* รายละเอียด */
+.gallery-details {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.gallery-counter {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* ปุ่มปิด */
+.gallery-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    z-index: 1002;
+}
+
+.image-count {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

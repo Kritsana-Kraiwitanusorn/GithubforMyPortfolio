@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio's Kritsana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="nav-brand">XOXOXOXOXOXO</a>
+        <ul class="nav-menu">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#educations">Educations</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <img src="Image/Profile.png" alt="Kritsana Kraiwitanusorn" class="profile-img">
+            <h1>XOXOXOXOXOXO</h1>
+            <p>Data Center & Data Analyst</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <li>
+                Sales Planning with 4+ years of experience in data analytic. 
+                Aiming to employ proven research, analytic and management skills to raise profitability for 
+                your company At Promise (Thailand) Co., Ltd., Coordinate with internal function leaders to 
+                drive and implement process improvement project within operation assessments. Provide 
+                pros & cons point of the analytics tool (Power BI) for management team and advise key 
+                benefit and wider trends to line of business. Conduct knowledge transfer about SQL to
+                internal officers
+            </li>
+        </section>
+
+        <section id="educations">
+            <h2 class="section-title">Educations</h2>
+            <div class="educations-container">
+                <!-- <div class="education-timeline"> -->
+                    <div class="educations-item">
+                        <h2 class="degree">Bachelor Degree</h2>
+                        <h4>King Mongkut's University of Technology North Bangkok, Faculty of Applied Science</h4>
+                        <p class="duration">2011 - 2015</p>
+                        <li>Bachelor Degree in Applied Statistics with second class honors GPA 3.33</li>
+                    </div>
+                    <div class="educations-item">
+                        <h2 class="degree">Master Degree</h2>
+                        <h4>King Mongkut's University of Technology North Bangkok, Faculty of Engineer</h4>
+                        <p class="duration">2016 - 2018</p>
+                        <li>Master Degree in Materials handing & Logistics GPA 3.80</li>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-content" onclick="openModal('ThaiCredit')">
+                        <h2>Data Center & Data Analyst</h2>
+                        <h4>ThaiCredit Bank Co., Ltd.</h4>
+                        <p class="duration">Apr 2022 - Present</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-content"  onclick="openModal('Promise')">
+                        <h2>Sales Planning</h2>
+                        <h4>Promise (Thailand) Co., Ltd.</h4>
+                        <p class="duration">Apr 2021 - Mar 2022</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-content" onclick="openModal('Mahakit')">
+                        <h2>Business Development and Logistics</h2>
+                        <h4>Mahakit Rubber Co., Ltd.</h4>
+                        <p class="duration">Aug 2018 - Mar 2021</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-content" onclick="openModal('CJ')">
+                        <h2>Supply Chain Management</h2>
+                        <h4>CJ Express Group Co., Ltd.</h4>
+                        <p class="duration">Nov 2017 - Jul 2018</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-content" onclick="openModal('KMUTNB')">
+                        <h2>Research Assistance</h2>
+                        <h4>KMUTNB</h4>
+                        <p class="duration">Feb 2016 - Aug 2016</p>
+                    </div>
+                </div>
+
+                 <!--PopUp Modals-->
+                 <div id="ThaiCreditModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" onclick="closeModal('ThaiCredit')">&times;</span>
+                        <h2>Data Center & Data Analyst</h2>
+                        <div class="modal-body">
+                            <h3>ThaiCredit Bank Co., Ltd.</h3>
+                            <p class="duration">Apr 2022 - Present</p>
+                            <div class="responsibilities">
+                                <h4>Core Responsibilities:</h4>
+                                <ul>
+                                    <li>xxxxxx.</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h4>Key Achievements:</h4>
+                                <ul>
+                                    <li>xxxxxx.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="PromiseModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" onclick="closeModal('Promise')">&times;</span>
+                        <h2>Sales Planning</h2>
+                        <div class="modal-body">
+                            <h3>Promise (Thailand) Co., Ltd.</h3>
+                            <p class="duration">Apr 2021 - Mar 2022</p>
+                            <div class="responsibilities">
+                                <h4>Core Responsibilities:</h4>
+                                <ul>
+                                    <li>Perform analysis on overall, team and individual performance and identify business 
+                                        opportunity and initiatives.</li>
+                                    <li>Generate, automate and produce performance and operational reports and dashboard.</li>
+                                    <li>Develop and enhance data capabilities and visualization.</li>
+                                    <li>Develop automation tools to enable the operational effectiveness.</li>
+                                    <li>Maintain and support the use of tools, reports and dashboard.</li>
+                                    <li>Validate the performance and benefit data for completeness and accuracy, working with 
+                                        relevant parties on both correction and prevention.</li>
+                                    <li>Assist strategic projects on the work related to data analysis, reporting and automate 
+                                        systems.</li>
+                                    <li>Participate in performance tuning to improve data processing for SAS batch job.</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h4>Key Achievements:</h4>
+                                <ul>
+                                    <li>Coordinate with internal function leaders to drive and implement process improvement 
+                                        project within operation assessments.</li>
+                                    <li>Provide pros & cons point of the analytics tool (Power BI) for management team and 
+                                        advise key benefit and wider trends to line of business. </li>
+                                    <li>Conduct knowledge transfer about SQL to internal officers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="MahakitModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" onclick="closeModal('Mahakit')">&times;</span>
+                        <h2>Business Development and Logistics</h2>
+                        <div class="modal-body">
+                            <h3>Mahakit Rubber Co., Ltd.</h3>
+                            <p class="duration">Aug 2018 - Mar 2021</p>
+                            <div class="responsibilities">
+                                <h4>Core Responsibilities:</h4>
+                                <ul>
+                                    <li>Data analysis and organize the advance transportation booking with the approved 
+                                        suppliers of each routing.</li>
+                                    <li>Updated and maintained Transportation data for planning/tendering and effective 
+                                        shipment consolidation to achieve least cost goals.</li>
+                                    <li>Managing and retaining relationships with existing clients by statistical analytics skills to 
+                                        justify costs and develop logistics solutions to meet agreed customer needs.</li>
+                                    <li>Maintain and update sale performance database by collect, manage, clean, and prepare 
+                                        data the monthly performance figure from system and sales team for sale performance 
+                                        reporting.</li>
+                                    <li>Analyze the sale performance data and provide executive summary to business leaders 
+                                        monthly with regard to improve the sale performance. Also, share the final number of 
+                                        each month with relevant parties.</li>
+                                    <li>Providing the forecast & availability reports Sales, Purchase in time lines and efficiency.</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h4>Key Achievements:</h4>
+                                <ul>
+                                    <li>Contribute to the production planning improvement project for developing production 
+                                        plan, budget and timelines according to production specifications. Determine production 
+                                        requirements based on plant capacity and production specifications, enforcing systems, 
+                                        policies, and procedures.</li>
+                                    <li>Contribute to the production process improvement project for solving problems of 
+                                        production process, through the improvement work flow, line balance and develops staff 
+                                        skills for more work efficiency.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="CJModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" onclick="closeModal('CJ')">&times;</span>
+                        <h2>Supply Chain Management</h2>
+                        <div class="modal-body">
+                            <h3>CJ Express Group Co., Ltd.</h3>
+                            <p class="duration">Nov 2017 - Jul 2018</p>
+                            <div class="responsibilities">
+                                <h4>Core Responsibilities:</h4>
+                                <ul>
+                                    <li>Monitor and analyse distribution centre store data to manage inventory flow. 
+                                        Communicate action plans back to the Operations Team.</li>
+                                    <li>Identify problems related to the store management.</li>
+                                    <li>Analyse consumer trends and insights to identify marketing opportunities quarterly.</li>
+                                    <li>Other sale support's requirements as assigned.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="KMUTNBModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" onclick="closeModal('KMUTNB')">&times;</span>
+                        <h2>Research Assistance</h2>
+                        <div class="modal-body">
+                            <h3>KMUTNB</h3>
+                            <p class="duration">Feb 2016 - Aug 2016</p>
+                            <div class="responsibilities">
+                                <h4>Core Responsibilities:</h4>
+                                <ul>
+                                    <li>Assisting the researcher's job in the field of the logistics.</li>
+                                    <li>Support research studies.</li>
+                                    <li>Data collection and management.</li>
+                                    <li>Perform other tasks as assigned.</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h4>Key Achievements:</h4>
+                                <ul>
+                                    <li>Enterprise Resource Planning (ERP).</li>
+                                    <li>Logistics Cost Reduction.</li>
+                                    <li>Labor and Logistics Productivity Improvement.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Data Analysis Skills</h3>
+                    <div class="skill-chip">Statistical Analysis</div>
+                    <div class="skill-chip">Data Manipulation and Management</div>
+                    <div class="skill-chip">Data Visualization</div>
+                    <div class="skill-chip">Machine Learning (Basic)</div>
+                    <div class="skill-chip">Data Warehousing </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Programming </h3>
+                    <div class="skill-chip">SAS Base & EG</div>
+                    <div class="skill-chip">SQL</div>
+                    <div class="skill-chip">Python</div>
+                    <div class="skill-chip">R</div>
+                    <div class="skill-chip">Microsoft Office</div>
+                    <div class="skill-chip">SPSS</div>
+                    <div class="skill-chip">Minitab</div>
+                </div>
+                <div class="skills-category">
+                    <h3>Visualization Tools</h3>
+                    <div class="skill-chip">Power BI</div>
+                    <div class="skill-chip">Looker Studio</div>
+                </div>
+                <div class="skills-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-chip">Critical Thinking</div>
+                    <div class="skill-chip">Problem-Solving</div>
+                    <div class="skill-chip">Communication</div>
+                    <div class="skill-chip">Attention to Detail</div>
+                    <div class="skill-chip">Teamwork</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <h2 class="section-title">Certificates</h2>
+            <div class="certificates-grid">
+                    <div class="certificates-card" onclick="openGalleryModal('DataCamp')">
+                        <div class="certificates-preview"> 
+                        <img src="Image/data-camp.jpg" alt="DataCamp">
+                            <div class="certificates-info">
+                                <h3>DataCamp</h3>
+                                <span class="image-count">3 images</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificates-card" onclick="openGalleryModal('365 Data Science')">
+                        <img src="Image/365-data-science.jpg" alt="365 DataScience">
+                        <div class="certificates-info">
+                            <h3>365 Data Science</h3>
+                        </div>
+                    </div>
+                    <div class="certificates-card" onclick="openGalleryModal('DataRockie')">
+                        <img src="Image/DataRockie.jpg" alt="DataRockie">
+                        <div class="certificates-info">
+                            <h3>DataRockie</h3>
+                        </div>
+                    </div>
+                    <div class="certificates-card" onclick="openGalleryModal('MOOCs')">
+                        <img src="Image/Mooc.jpg" alt="MOOCs">
+                        <div class="certificates-info">
+                            <h3>MOOCs</h3>
+                        </div>
+                    </div>
+                    <div class="certificates-card" onclick="openGalleryModal('DIGI')">
+                        <img src="Image/DIGI.jpg" alt="DIGI">
+                        <div class="certificates-info">
+                            <h3>DIGI</h3>
+                        </div>
+                    </div>
+                    <div class="certificates-card" onclick="openGalleryModal('SAMSUNG')">
+                        <img src="Image/SamsungCa.png" alt="Samsung">
+                        <div class="certificates-info">
+                            <h3>SAMSUNG</h3>
+                        </div>
+                    </div>
+            </div>
+
+            <div id="galleryModal" class="gallery-modal">
+                <div class="gallery-modal-content">
+                    <span class="gallery-close" onclick="closeGalleryModal()">&times;</span>
+                    
+                    <div class="gallery-container">
+                        <!-- ปุ่มเลื่อนซ้าย -->
+                        <button class="gallery-nav prev" onclick="changeImage(-1)">❮</button>
+                        
+                        <!-- ส่วนแสดงรูปภาพ -->
+                        <div class="gallery-main">
+                            <img id="galleryImage" src="" alt="Certificate" />
+                        </div>
+                        
+                        <!-- ปุ่มเลื่อนขวา -->
+                        <button class="gallery-nav next" onclick="changeImage(1)">❯</button>
+                    </div>
+                    
+                    <!-- ส่วนแสดง thumbnails -->
+                    <div class="gallery-thumbnails" id="thumbnailContainer">
+                    </div>
+                    
+                    <!-- ส่วนแสดงรายละเอียด -->
+                    <div class="gallery-details">
+                        <h3 id="galleryTitle"></h3>
+                        <p id="galleryDescription"></p>
+                        <p id="completed"></p>
+                        <p class="gallery-counter">
+                            Image <span id="currentImageNum">1</span> of <span id="totalImages">0</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+                
+        </section>             
+         
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> Kritsanakraiwitanusorn@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 06-1384-8590</p>
+                    <p><i class="fab fa-linkedin"></i> linkedin.com/in/kritsana-kraiwitanusorn</p>
+                </div>
+            </div>
+        </section>
+
+     </main>
+
+    <script>
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all skill items
+        document.querySelectorAll('.skills-category').forEach(item => {
+            observer.observe(item);
+        });
+
+        // Observe all educations items
+        document.querySelectorAll('.educations-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // Observe all certificates cards
+        document.querySelectorAll('.certificates-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Observe all experience items
+        document.querySelectorAll('.experience-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js" ></script>
+
+</body>
+</html>
